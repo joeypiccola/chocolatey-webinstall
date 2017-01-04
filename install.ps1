@@ -178,7 +178,7 @@ Download-File $url $file
 
 # Determine unzipping method
 # 7zip is the most compatible so use it by default
-# removed becuase we're downloading locally hosted nupkg
+# removed becuase we're on ps5 and we're going to use Expand-Archive
 <#
 $unzipMethod = '7zip'
 $useWindowsCompression = $env:chocolateyUseWindowsCompression
