@@ -33,6 +33,8 @@ if (![string]::IsNullOrEmpty($chocolateyVersion)){
   $url = "https://chocolatey.org/api/v2/package/chocolatey/$chocolateyVersion"
 }
 
+$env:chocolateyDownloadUrl = 'https://artifactory.-.com/artifactory/api/nuget/nuget-local/chocolatey.0.10.3.nupkg'
+
 $chocolateyDownloadUrl = $env:chocolateyDownloadUrl
 if (![string]::IsNullOrEmpty($chocolateyDownloadUrl)){
   Write-Output "Downloading Chocolatey from : $chocolateyDownloadUrl"
