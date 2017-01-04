@@ -179,14 +179,14 @@ Download-File $url $file
 # Determine unzipping method
 # 7zip is the most compatible so use it by default
 # removed becuase we're on ps5 and we're going to use Expand-Archive
-<#
+
 $unzipMethod = '7zip'
 $useWindowsCompression = $env:chocolateyUseWindowsCompression
 if ($useWindowsCompression -ne $null -and $useWindowsCompression -eq 'true') {
   Write-Output 'Using built-in compression to unzip'
   $unzipMethod = 'builtin'
 }
-#>
+
 
 $env:chocolateyUseWindowsCompression = 'true'
 
